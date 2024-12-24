@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecyclerView</string>
+    <string name="image_chat_item">Image chat item</string>
 </resources>
