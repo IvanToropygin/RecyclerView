@@ -23,6 +23,12 @@ class ChatAdapter(private val chatItems: MutableList<ChatItem>) :
         chatItems.removeAt(position)
         notifyItemRemoved(position)
     }
+
+    fun addItems(newItems: List<ChatItem>) {
+        val startPosition = chatItems.size
+        chatItems.addAll(newItems)
+        notifyItemRangeInserted(startPosition, newItems.size)
+    }
 }
 
 class ChatItemViewHolder(private val binding: ChatItemBinding) :
